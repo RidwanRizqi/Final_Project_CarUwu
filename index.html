@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Uwu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/e213a3e1e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
         </ul>
         <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
         <div class="search-box container">
-            <input type="search" name="" id="" placeholder="Search here...">
+            <label for=""></label><input type="search" name="" id="" placeholder="Search here...">
         </div>
     </div>
 </header>
@@ -32,69 +32,63 @@
         <p>It only takes a few minutes to get started. Whether you are buying <br>
             car or spare part, we send your information out to local and national <br>
             partners and they come back to you with great offers.</p>
-        <a href="#" class="btn">Discover Now</a>
+        <a href="#cars" class="btn">Discover Now</a>
     </div>
 </section>
 <section class="cars" id="cars">
     <div class="heading">
-        <span>Our Car Collection</span>
-        <h2>We have all types cars</h2>
+        <h2>Our Car Collection</h2>
         <p>No haggling, no fees, just great prices</p>
     </div>
-    <div class="cars-slideshow container">
+    <div class="slideshow container">
         <div class="mySlides fade">
             <div class="text">Porsche 911 GT2 RS</div>
-            <img src="img/slideshow3.jpg" style="width:100%" alt="">
+            <img src="img/slideshow/slideshow3.jpg" style="width:100%" alt="">
         </div>
 
         <div class="mySlides fade">
             <div class="text">Ferrari SF90 Stradale</div>
-            <img src="img/slideshow1.jpg" style="width:100%" alt="">
+            <img src="img/slideshow/slideshow1.jpg" style="width:100%" alt="">
         </div>
 
         <div class="mySlides fade">
             <div class="text">Lamborghini Gallardo</div>
-            <img src="img/slideshow2.jpg" style="width:100%" alt="">
-        </div>
-
-        <div class="mySlides fade">
-            <div class="text">Aston Martin DB11</div>
-            <img src="img/slideshow4.jpg" style="width:100%" alt="">
+            <img src="img/slideshow/slideshow2.jpg" style="width:100%" alt="">
         </div>
 
         <div class="mySlides fade">
             <div class="text">McLaren 720s</div>
-            <img src="img/slideshow5.jpg" style="width:100%" alt="">
+            <img src="img/slideshow/slideshow5.jpg" style="width:100%" alt="">
         </div>
 
         <div class="mySlides fade">
             <div class="text">Mercedes Benz AMG GT</div>
-            <img src="img/slideshow6.jpg" style="width:100%" alt="">
+            <img src="img/slideshow/slideshow6.jpg" style="width:100%" alt="">
         </div>
     </div>
     <div class="cars-container container">
-        <div class="box" onclick="location.href= 'listCarPorsche.html'" id="porsche">
-            <img src="img/porschelogo.jpg" alt="">
+        <div class="box" id="porsche">
+            <img src="img/logo/porschelogo.jpg" alt="">
             <h2>Porsche</h2>
         </div>
-        <div class="box" onclick="location.href= 'listCarLamborghini.html'" id="lamborghini">
-            <img src="img/lamborghinilogo.jpg" alt="">
+        <div class="box" id="lamborghini">
+            <img src="img/logo/lamborghinilogo.jpg" alt="">
             <h2>Lamborghini</h2>
         </div>
-        <div class="box" onclick="location.href= 'listCarFerrari.html'" id="ferrari">
-            <img src="img/ferrarilogo.jpg" alt="">
+        <div class="box" id="ferrari">
+            <img src="img/logo/ferrarilogo.jpg" alt="">
             <h2>Ferrari</h2>
         </div>
-        <div class="box" onclick="location.href= 'listCarAstonMartin.html'" id="aston-martin">
-            <img src="img/astonmartinlogo.jpg" alt="">
-            <h2>Aston Martin</h2>
+        <div class="box" id="bentley">
+            <img src="img/logo/bentleylogo.jpg" alt="">
+            <h2>Bentley</h2>
         </div>
-        <div class="box" onclick="location.href= 'listCarMercedes.html'" id="mercedes-benz">
-            <img src="img/merclogo.jpg" alt="">
+        <div class="box" id="mercedes">
+            <img src="img/logo/merclogo.jpg" alt="">
             <h2>Mercedes Benz</h2>
         </div>
-        <div class="box" onclick="location.href= 'listCarMcalaren.html'" id="mclaren">
-            <img src="img/mclarenlogo.jpg" alt="">
+        <div class="box" id="mclaren">
+            <img src="img/logo/mclarenlogo.jpg" alt="">
             <h2>Mclaren</h2>
         </div>
     </div>
@@ -114,16 +108,15 @@
 </section>
 <section class="parts" id="parts">
     <div class="heading">
-        <span>Spare Part</span>
-        <h2>Our Car Is Always Excellent</h2>
+        <h2>Auto Spare Part</h2>
         <p>Car Uwu provides end-to-end solutions to consumers and used car dealers, <br>
             from car inspection to ownership transfer to financing, promising a service that is trusted, convenient and efficient.</p>
     </div>
     <div class="parts-container container">
         <div class="box">
-            <img src="img/tyres.png" alt="">
+            <img src="img/parts/tyres.png" alt="">
             <h3>Tyres</h3>
-            <span>$150.59</span>
+            <span>$100</span>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -132,12 +125,12 @@
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <a href="#" class="btn">Buy Now</a>
-            <a href="detailsParts.html" class="details">View Details</a>
+            <a href="detailPart.html" class="details" id="tyres">View Details</a>
         </div>
         <div class="box">
-            <img src="img/piston.png" alt="">
+            <img src="img/parts/piston.png" alt="">
             <h3>Piston</h3>
-            <span>$100.99</span>
+            <span>$300</span>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -146,12 +139,12 @@
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View Details</a>
+            <a href="#" class="details" id="piston">View Details</a>
         </div>
         <div class="box">
-            <img src="img/gearbox.png" alt="">
+            <img src="img/parts/gearbox.png" alt="">
             <h3>Gearbox</h3>
-            <span>$520.99</span>
+            <span>$500</span>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -160,12 +153,12 @@
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View Details</a>
+            <a href="#" class="details" id="gearbox">View Details</a>
         </div>
         <div class="box">
-            <img src="img/sparkplugs.png" alt="">
+            <img src="img/parts/sparkplugs.png" alt="">
             <h3>Spark Plugs</h3>
-            <span>$80.99</span>
+            <span>$50</span>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -174,12 +167,12 @@
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View Details</a>
+            <a href="#" class="details" id="spark-plugs">View Details</a>
         </div>
         <div class="box">
-            <img src="img/disc-brake.png" alt="">
+            <img src="img/parts/disc-brake.png" alt="">
             <h3>Disc Brake</h3>
-            <span>$220.99</span>
+            <span>$200</span>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -188,12 +181,12 @@
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View Details</a>
+            <a href="#" class="details" id="disc-brake">View Details</a>
         </div>
         <div class="box">
-            <img src="img/suspension.png" alt="">
+            <img src="img/parts/suspension.png" alt="">
             <h3>Suspension</h3>
-            <span>$170.99</span>
+            <span>$300</span>
             <div class="rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -202,7 +195,7 @@
                 <i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <a href="#" class="btn">Buy Now</a>
-            <a href="#" class="details">View Details</a>
+            <a href="#" class="details" id="suspension">View Details</a>
         </div>
     </div>
 </section>
@@ -214,25 +207,25 @@
     </div>
     <div class="news-container container">
         <div class="box">
-            <img src="img/news1.png" alt="">
+            <img src="img/news/news1.png" alt="">
             <span>October 14, 2022 07:14 AM</span>
             <h3>Tesla's vegan leather supplier bets material will be used everywhere</h3>
             <p>For Ultrafabrics Holdings Co. supplying seating material to Tesla Inc., United Airlines Holdings Inc.</p>
-            <a href="news.html" class="news-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="news-btn" id="news1">Read More<i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="box">
-            <img src="img/news2.png" alt="">
+            <img src="img/news/news2.png" alt="">
             <span>October 14, 2022 10:33 AM</span>
             <h3>Ford says top Lincoln dealers face $900,000 bill to sell EVs</h3>
             <p>Lincoln stores that want to sell EVs will need to invest more than four times as much as Cadillac</p>
-            <a href="#" class="news-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="news-btn" id="news2">Read More<i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="box">
-            <img src="img/news3.png" alt="">
+            <img src="img/news/news3.png" alt="">
             <span>October 13, 2022 02:55 PM</span>
             <h3>BMW, Amazon Web Services collaborate on vehicle data software</h3>
             <p>BMW-Amazon Web Services software collaboration will collect and analyze connected-vehicle data</p>
-            <a href="#" class="news-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="news-btn" id="news3">Read More<i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -244,7 +237,8 @@
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.youtube.com/channel/UCYROhAMwx0JT5-1MNCjHnjA"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/6285600846525"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="footer-box">
@@ -271,6 +265,7 @@
 <div class="copyright">
     <p>&#169; CarUwu All Right Reserved</p>
 </div>
-<script src="main.js"></script>
+<script src="script/data.js"></script>
+<script src="script/main.js"></script>
 </body>
 </html>
