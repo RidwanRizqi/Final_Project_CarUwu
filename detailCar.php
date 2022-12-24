@@ -4,8 +4,6 @@ include "config.php";
 if(!isset($_GET['MBLID'])){
     header("location:index.php");
 }
-
-
 ?>
 
 <!DOCTYPE html>

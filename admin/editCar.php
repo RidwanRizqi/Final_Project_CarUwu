@@ -15,7 +15,13 @@ if (isset($_POST['edit'])) {
     $hargaMobil = $_POST['hargaMobil'];
     $stokMobil = $_POST['stokMobil'];
     $idBrand = $_POST['idBrand'];
-    echo "<script>alert('$idBrand');</script>";
+
+    $mobil = mysqli_query($koneksi, " SELECT gambar_mobil, gambarSlide_mobil FROM mobil WHERE id_mobil = '$MBLID' ");
+    $result = mysqli_fetch_array($mobil);
+    $gambarMobil = $result['gambar_mobil'];
+    $gambarSlideMobil = $result['gambarSlide_mobil'];
+    unlink("../img/cars/$gambarMobil");
+    unlink("../img/slideshow/$gambarSlideMobil");
 
     $gambarMobil = uploadMobil();
     if (!$gambarMobil) {
@@ -25,11 +31,9 @@ if (isset($_POST['edit'])) {
     if (!$gambarSlideMobil) {
         return false;
     }
-    echo "<script>alert('$gambarMobil');</script>";
     $query = "UPDATE mobil SET nama_mobil = '$namaMobil', tipe_mobil = '$tipeMobil', mesin_mobil = '$mesinMobil', cc_mobil = '$ccMobil', deskripsi_mobil = '$deskripsiMobil', exterior_mobil = '$exteriorMobil', interior_mobil = '$interiorMobil', harga_mobil = '$hargaMobil', stok = '$stokMobil', id_brand = '$idBrand', gambar_mobil = '$gambarMobil', gambarSlide_mobil = '$gambarSlideMobil' WHERE id_mobil = '$MBLID'";
 
     $result = mysqli_query($koneksi, $query);
-    echo "<script>alert('$gambarMobil');</script>";
 
     if ($result) {
         echo "

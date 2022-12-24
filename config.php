@@ -256,7 +256,7 @@ function uploadPart()
         return false;
     }
 
-    $jenis_gambar=['jpg','jpeg','gif'];
+    $jenis_gambar=['jpg','jpeg','gif', 'png'];
     $pecah_gambar=explode('.',$nama_file);
     $pecah_gambar=strtolower(end($pecah_gambar));
     if(!in_array($pecah_gambar,$jenis_gambar))

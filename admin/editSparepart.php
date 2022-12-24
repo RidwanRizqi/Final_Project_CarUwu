@@ -9,6 +9,12 @@ if (isset($_POST['edit'])) {
     $deskripsiPart = $_POST['deskripsiPart'];
     $hargaPart = $_POST['hargaPart'];
     $stokPart = $_POST['stokPart'];
+
+    $part = mysqli_query($koneksi, " SELECT gambar_sparepart FROM sparepart WHERE id_sparepart = '$PRTID' ");
+    $result = mysqli_fetch_array($part);
+    $gambarPart = $result['gambar_sparepart'];
+    unlink("../img/parts/$gambarPart");
+
     $gambarPart = uploadPart();
     if (!$gambarPart) {
         return false;

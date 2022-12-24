@@ -7,6 +7,12 @@ if (isset($_POST['edit'])) {
     $judulBerita = $_POST['judulBerita'];
     $subjudulBerita = $_POST['subjudulBerita'];
     $tanggalBerita = $_POST['tanggalBerita'];
+
+    $berita = mysqli_query($koneksi, " SELECT gambar_berita FROM berita WHERE id_berita = '$NWSID' ");
+    $result = mysqli_fetch_array($berita);
+    $gambarBerita = $result['gambar_berita'];
+    unlink("../img/news/$gambarBerita");
+
     $gambarBerita = uploadBerita();
     if (!$gambarBerita) {
         return false;
@@ -53,14 +59,11 @@ if (isset($_POST['edit'])) {
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!--    Data Tables-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://kit.fontawesome.com/e213a3e1e1.js" crossorigin="anonymous"></script>
-
+    <!--    modal-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!--    Date picker-->
     <!--  jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -73,11 +76,6 @@ if (isset($_POST['edit'])) {
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    <!--    modal-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .modal-header, h4, .close {
             background-color: #0057FF;
