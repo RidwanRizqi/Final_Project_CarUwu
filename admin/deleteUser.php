@@ -1,6 +1,12 @@
 <?php
 include '../config.php';
 $iduser = $_GET['USRID'];
+
+$user = mysqli_query($koneksi, " SELECT ktp FROM user WHERE id_user = '$iduser' ");
+$result = mysqli_fetch_array($user);
+$gambarKTP = $result['ktp'];
+unlink("../img/user/ktp/$gambarKTP");
+
 $query = "DELETE FROM user WHERE id_user = '$iduser'";
 $result = mysqli_query($koneksi , $query);
 if ($result) {
