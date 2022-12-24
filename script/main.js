@@ -1,15 +1,16 @@
-let search = document.querySelector('.search-box');
-let searchIcon = document.querySelector('#search-icon');
-searchIcon.onclick = () => {
-    search.classList.toggle('active');
-    navbar.classList.remove('active');
-}
+// let search = document.querySelector('.search-box');
+// let searchIcon = document.querySelector('#search-icon');
+// searchIcon.onclick = () => {
+//     search.classList.toggle('active');
+//     navbar.classList.remove('active');
+// }
 
 let navbar = document.querySelector('.navbar');
+let dropbtn = document.querySelector('.dropbtn');
 let navbarIcon = document.querySelector('#menu-icon');
 navbarIcon.onclick = () => {
     navbar.classList.toggle('active');
-    search.classList.remove('active');
+    dropbtn.classList.toggle('active');
 }
 
 let slideIndex = 0;
@@ -33,13 +34,14 @@ let header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
     header.classList.toggle('show', window.scrollY > 0);
+    dropbtn.classList.toggle('active');
 });
 
 
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".navbar-item");
 window.onscroll = () => {
-    search.classList.remove('active');
+    // search.classList.remove('active');
     navbar.classList.remove('active');
     var current = "";
 
@@ -58,37 +60,37 @@ window.onscroll = () => {
     });
 };
 
-let boxListCar = document.querySelectorAll('.box');
-boxListCar.forEach((item) => {
-    item.addEventListener('click', () => {
-        switch (item.id) {
-            case 'porsche':
-                localStorage.setItem("list", "porsche");
-                location.href = "listCar.html";
-                break;
-            case 'ferrari':
-                localStorage.setItem("list", "ferrari");
-                location.href = "listCar.html";
-                break;
-            case 'lamborghini':
-                localStorage.setItem("list", "lamborghini");
-                location.href = "listCar.html";
-                break;
-            case 'bentley':
-                localStorage.setItem("list", "bentley");
-                location.href = "listCar.html";
-                break;
-            case 'mercedes':
-                localStorage.setItem("list", "mercedes");
-                location.href = "listCar.html";
-                break;
-            case 'mclaren':
-                localStorage.setItem("list", "mclaren");
-                location.href = "listCar.html";
-                break;
-        }
-    })
-});
+// let boxListCar = document.querySelectorAll('.box');
+// boxListCar.forEach((item) => {
+//     item.addEventListener('click', () => {
+//         switch (item.id) {
+//             case 'porsche':
+//                 localStorage.setItem("list", "porsche");
+//                 location.href = "listCar.php";
+//                 break;
+//             case 'ferrari':
+//                 localStorage.setItem("list", "ferrari");
+//                 location.href = "listCar.php";
+//                 break;
+//             case 'lamborghini':
+//                 localStorage.setItem("list", "lamborghini");
+//                 location.href = "listCar.php";
+//                 break;
+//             case 'bentley':
+//                 localStorage.setItem("list", "bentley");
+//                 location.href = "listCar.php";
+//                 break;
+//             case 'mercedes':
+//                 localStorage.setItem("list", "mercedes");
+//                 location.href = "listCar.php";
+//                 break;
+//             case 'mclaren':
+//                 localStorage.setItem("list", "mclaren");
+//                 location.href = "listCar.php";
+//                 break;
+//         }
+//     })
+// });
 
 
 
@@ -99,27 +101,27 @@ function clickPart() {
             switch (item.id) {
                 case 'tyres':
                     localStorage.setItem("part", "tyres");
-                    location.href = "detailPart.html";
+                    location.href = "detailPart.php";
                     break;
                 case 'piston':
                     localStorage.setItem("part", "piston");
-                    location.href = "detailPart.html";
+                    location.href = "detailPart.php";
                     break;
                 case 'gearbox':
                     localStorage.setItem("part", "gearbox");
-                    location.href = "detailPart.html";
+                    location.href = "detailPart.php";
                     break;
                 case 'spark-plugs':
                     localStorage.setItem("part", "spark-plugs");
-                    location.href = "detailPart.html";
+                    location.href = "detailPart.php";
                     break;
                 case 'disc-brake':
                     localStorage.setItem("part", "disc-brake");
-                    location.href = "detailPart.html";
+                    location.href = "detailPart.php";
                     break;
                 case 'suspension':
                     localStorage.setItem("part", "suspension");
-                    location.href = "detailPart.html";
+                    location.href = "detailPart.php";
                     break;
             }
         });
@@ -135,15 +137,15 @@ function clickNews() {
             switch (item.id) {
                 case 'news1':
                     localStorage.setItem("news", "news1");
-                    location.href = "news.html";
+                    location.href = "news.php";
                     break;
                 case 'news2':
                     localStorage.setItem("news", "news2");
-                    location.href = "news.html";
+                    location.href = "news.php";
                     break;
                 case 'news3':
                     localStorage.setItem("news", "news3");
-                    location.href = "news.html";
+                    location.href = "news.php";
                     break;
             }
         });
@@ -151,6 +153,14 @@ function clickNews() {
 }
 
 clickNews();
+
+function sendGetRequest(url) {
+    let newURL = "http://localhost:8080/UTSJualBeliMobil/" + url;
+    alert(newURL);
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', newURL);
+    xhr.send();
+}
 
 
 

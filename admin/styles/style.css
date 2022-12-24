@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.page-title {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.navigasi {
+    background: #0057FF;
+    z-index: 3;
+    position: sticky;
+    width: 100%;
+    height: 62px;
+    top: 0;
+}
+
+.navigasi .profile-nav {
+    float: right;
+    display: none;
+}
+.navigasi .profile-nav li a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+}
+.navigasi .profile-nav li ul {
+    visibility: hidden;
+    opacity: 0;
+    right: 0;
+    position: absolute;
+}
+
+.navigasi .profile-nav li ul li a {
+    padding: 10px 20px;
+    background: #0041c4;
+}
+
+.navigasi .profile-nav .ts-account:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+    .navigasi .profile-nav {
+        display: block;
+    }
+
+.sidebar {
+    background: #0041c4;
+    max-height: 0;
+    transition: max-height 0.3s;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    top: 60px;
+    overflow-y: auto;
+}
+
+    .sidebar .profile-nav {
+        display: none;
+    }
+    .sidebar {
+        max-height: 100%;
+        bottom: 0;
+    }
+
+.sidebar-menu .label {
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.sidebar-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 15px;
+    color: #fff;
+}
+
+.sidebar-menu li i {
+    color: white;
+    margin-right: 10px;
+}
+
+.sidebar-menu li a:hover {
+    color: white; !important;
+    text-decoration: none; !important;
+    background: #0057FF;
+}
+
+.customlogo {
+    font-color: white; !important;
+}
+    .konten .sidebar {
+        width: 250px;
+        float: left;
+    }
+    .konten .wrap {
+        margin-left: 250px;
+    }
+/* Login page */
+.login-page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/*login form*/
+.login-form {
+    min-width: 35%;
+}
+
+/* Modal */
+/*.modal .fade .in {*/
+/*    opacity: 1 !important;*/
+/*    transition: opacity 0.3s linear;*/
+/*}*/
+/*.fade:not(.show) {*/
+/*    opacity: 10 !important;*/
+/*    background-color: transparent !important;*/
+/*}*/
+
+/*.modal {*/
+/*    top: 20px !important;*/
+/*}*/
